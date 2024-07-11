@@ -15,4 +15,4 @@
 ![Additional Dependencies](pics/Picture3.png)
 
 *Now try running a code  to see if it worked!!*
-[test file 1](tester/test1/main.cpp)
+[test file 1](tester/test_1/main.cpp)
