@@ -16,3 +16,8 @@
 
 *Now try running a code  to see if it worked!!*
 [test file 1](tester/test_1/main.cpp)
+
+## NOTICE!
+- if you'll go past excercise 1, make sure to copy file called glew32.dll from glew and copy it into your debug folder in your project
+![glew file](pics/Picture4.png)
+![project debug file](pics/Picture5.png)

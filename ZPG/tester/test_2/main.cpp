@@ -1,4 +1,4 @@
-//-----------------------------------------------
+//----------------------------------------------- *
 //Nejdříve budeme potřebovat inicializovat knihovnu GLEW (můžete využít ukázku z minulého cvičení), include knihovny GLEW použijte před knihovnou GLFW.
 
 //Include GLEW
@@ -8,7 +8,8 @@
 
 
 //-----------------------------------------------
-//Dále budeme potřebovat pole vrcholů, které bude definovat náš model (trojúhelník) a shadery (vertex a fragment).
+//Dále budeme potřebovat pole vrcholů, které bude definovat náš model 
+//(trojúhelník) a shadery (vertex a fragment).
 
 float points[] = {
     0.0f, 0.5f, 0.0f,
@@ -80,7 +81,7 @@ float ratio = width / (float)height;
 glViewport(0, 0, width, height);
 
 
-//-----------------------------------------------
+//----------------------------------------------- *
 //Vytvořte VBO (buffer objekt), což je blok paměti s daty a VAO (vertex array) pro následné vykreslování modelu.
 
 //vertex buffer object (VBO)
@@ -101,7 +102,7 @@ glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
 //-----------------------------------------------
 //Vytvořte vertex a fragment shader a následně shader program
 
- //create and compile shaders
+//create and compile shaders
 GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
 glShaderSource(vertexShader, 1, &vertex_shader, NULL);
 glCompileShader(vertexShader);
