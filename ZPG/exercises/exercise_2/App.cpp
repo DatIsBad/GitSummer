@@ -21,7 +21,7 @@ void App::RunApp() {
 		exit(EXIT_FAILURE);
 	}
 
-	m_window = glfwCreateWindow(800, 600, "ZPG", NULL, NULL);
+	m_window = glfwCreateWindow(800, 800, "ZPG", NULL, NULL);
 	if (!m_window) {
 		glfwTerminate();
 		exit(EXIT_FAILURE);
@@ -50,7 +50,17 @@ void App::RunApp() {
 	glViewport(0, 0, width, height);
 
 	m_buffer = new Buffer();
-	m_buffer->addPoint();
+
+	float points[] = {
+	-0.5f, 0.5f, 0.0f,
+	0.5f, 0.5f, 0.0f,
+	-0.5f, -0.5f, 0.0f,
+	0.5f, 0.5f, 0.0f,
+	-0.5f, -0.5f, 0.0f,
+	0.5f, -0.5f, 0.0f,
+	};
+
+	m_buffer->addPoint(points, std::size(points));
 	m_shader = new Shader();
 
 
@@ -66,7 +76,7 @@ void App::RunApp() {
 
 
 		// draw triangles
-		glDrawArrays(GL_TRIANGLES, 0, 3); //mode,first,count
+		glDrawArrays(GL_TRIANGLES, 0, 6); //mode,first,count
 		// update other events like input handling
 		glfwPollEvents();
 		// put the stuff we’ve been drawing onto the display
